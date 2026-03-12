@@ -3,7 +3,7 @@ import { Mail, Linkedin, Github, Download } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-black/5">
+    <footer id="contact" className="py-24 px-6 md:px-12 max-w-7xl mx-auto border-t border-black/5">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
         
         <motion.div 
@@ -17,7 +17,7 @@ export default function Footer() {
             Let's build something meaningful.
           </h2>
           <div className="flex gap-4 mb-8">
-            <a href="mailto:sjfan910@gmail.com" className="p-3 bg-black/5 rounded-full hover:bg-black/10 transition-colors text-foreground">
+            <a href="mailto:sjf@shijiafan.com" className="p-3 bg-black/5 rounded-full hover:bg-black/10 transition-colors text-foreground">
               <Mail size={20} />
             </a>
             <a href="https://linkedin.com/in/shijia-fan-50369b377" target="_blank" rel="noopener noreferrer" className="p-3 bg-black/5 rounded-full hover:bg-black/10 transition-colors text-foreground">

@@ -5,7 +5,7 @@ export default function About() {
     { label: "UK Junior Men's Sabre", value: "11th" },
     { label: "Sentiment Analysis Accuracy", value: "97.5%" },
     { label: "Raised for Scholarships", value: "£1,800+" },
-    { label: "Academic Publications", value: "2" },
+    { label: "Published Papers", value: "2" },
     { label: "Predicted A-Levels", value: "A*A*A*A" },
   ];
 
@@ -32,13 +32,13 @@ export default function About() {
             className="prose prose-lg text-foreground/80 font-light leading-relaxed"
           >
             <p className="mb-6">
-              I am a Beijing-born, UK-educated builder passionate about applying artificial intelligence to eldercare. Currently studying Mathematics, Further Mathematics, Chemistry, and Computer Science at Tonbridge School.
+              I'm an AI researcher, full-stack developer, and nationally ranked fencer from Beijing, now based in the UK.
             </p>
             <p className="mb-6">
-              My work spans from developing multimodal sentiment analysis systems for nursing homes to building platforms that fund scholarships in rural Thailand. I believe the most powerful technology is built with empathy.
+              I have two academic publications in geriatric AI, a machine learning internship at JD.com, and I co-founded a nonprofit tutoring platform that operates across five countries.
             </p>
             <p>
-              Beyond the screen, I am a competitive national-level fencer, a certified referee, and a community builder.
+              I build things that work for people who need them most.
             </p>
           </motion.div>
         </div>

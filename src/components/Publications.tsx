@@ -20,19 +20,19 @@ const publications = [
 export default function Publications() {
   return (
     <section id="publications" className="py-24 md:py-32 px-6 md:px-12 max-w-7xl mx-auto border-t border-black/5">
-      <motion.h2 
+      <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
         className="text-sm font-medium text-muted uppercase tracking-widest mb-16"
       >
-        04 — Publications
+        05 — Publications
       </motion.h2>
 
       <div className="flex flex-col gap-8">
         {publications.map((pub, index) => (
-          <motion.div 
+          <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -53,7 +53,7 @@ export default function Publications() {
                 </p>
               </div>
             </div>
-            
+
             <div className="shrink-0 ml-12 md:ml-0">
               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-black/5 text-foreground">
                 {pub.status}

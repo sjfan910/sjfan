@@ -6,11 +6,11 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import WhyEldercare from './components/WhyEldercare';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
-import Publications from './components/Publications';
 import Leadership from './components/Leadership';
-import Fencing from './components/Fencing';
+import Publications from './components/Publications';
 import Skills from './components/Skills';
 import Footer from './components/Footer';
 
@@ -22,11 +22,11 @@ export default function App() {
       <main>
         <Hero />
         <About />
+        <WhyEldercare />
         <Projects />
         <Experience />
-        <Publications />
         <Leadership />
-        <Fencing />
+        <Publications />
         <Skills />
       </main>
       <Footer />
