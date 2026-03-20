@@ -1,10 +1,12 @@
 import { motion } from 'motion/react';
 import { ArrowLeft, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 export default function FencingJourney() {
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-black selection:text-white">
       <div className="bg-grain"></div>
+
       {/* Minimal top bar */}
       <motion.header
         initial={{ opacity: 0, y: -20 }}
@@ -32,7 +34,9 @@ export default function FencingJourney() {
           </a>
         </div>
       </motion.header>
+
       <main className="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+
         {/* Hero */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -52,6 +56,7 @@ export default function FencingJourney() {
             11 years on the piste. The last 6, entirely self-coached.
           </p>
         </motion.div>
+
         {/* Story */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
           <motion.div
@@ -62,25 +67,20 @@ export default function FencingJourney() {
           >
             <h2 className="text-sm font-medium text-muted uppercase tracking-widest">The Story</h2>
             <p className="text-lg font-light text-foreground/80 leading-relaxed">
-              I started fencing at age 8 in Beijing, training under Olympic champion Zhong Man.
-              That foundation — rigorous, technical, uncompromising — shaped how I think about
-              everything: sport, research, and building.
+              I started fencing at age 8 in Beijing, training under Olympic champion Zhong Man. The rigorous, technical, uncompromising foundation shaped how I approach everything: sport, research, and passion.
             </p>
             <p className="text-lg font-light text-foreground/80 leading-relaxed">
-              When I moved to the UK, I continued competing in men's sabre, reaching <span className="text-foreground font-medium">11th nationally
-              at the UK Junior level</span>. But the real challenge came when I lost access to formal coaching.
+              When I moved to the UK, I continued competing in men's sabre, reaching{" "}
+              <span className="text-foreground font-medium">11th nationally at the Junior level.</span>{" "}
+              But the real challenge came when I lost access to formal coaching.
             </p>
             <p className="text-lg font-light text-foreground/80 leading-relaxed">
-              For the last 6 years, I've trained without a coach. No external voice telling me what
-              to fix, no structured programme handed to me. I've had to study my own footwork on video,
-              analyse opponents' patterns myself, and design my own periodisation. It taught me
-              something about self-direction that I don't think I could have learned any other way.
+              Tonbridge had no sabre coach, so I built my own path: flying back to Beijing each break for private coaching, training in Korea and New York, then bringing it all back to build programmes for my teammates and myself. Not much was handed to me, but I gave everything back.
             </p>
             <p className="text-lg font-light text-foreground/80 leading-relaxed">
-              Beyond competing, I've given back to the sport. As <span className="text-foreground font-medium">Head Captain, Head Coach,
-              and a Level 2 Certified Referee</span> for my university club, I grew the club from 30 to 50
-              members and developed two sabreurs into the national top 80. I donate 100% of my
-              refereeing earnings to the team equipment fund.
+              As{" "}
+              <span className="text-foreground font-medium">Head Captain, Student Coach, and British Level 2 National Sabre Referee</span>
+              , I lead training twice a week, developed two sabreurs into the national top 80, and donate 100% of my refereeing earnings to the team equipment fund.
             </p>
           </motion.div>
           <motion.div
@@ -89,17 +89,7 @@ export default function FencingJourney() {
             transition={{ duration: 0.8, delay: 0.35 }}
             className="space-y-6"
           >
-            <h2 className="text-sm font-medium text-muted uppercase tracking-widest">Watch</h2>
-            <div className="rounded-2xl overflow-hidden border border-black/10 aspect-video">
-              <iframe
-                src="https://www.youtube.com/embed/bTfOXofryoQ"
-                title="Fencing video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-            <h2 className="text-sm font-medium text-muted uppercase tracking-widest pt-4">Highlights</h2>
+            <h2 className="text-sm font-medium text-muted uppercase tracking-widest">Highlights</h2>
             <ul className="space-y-4">
               {[
                 { stat: "#11", label: "UK Junior Men's Sabre ranking" },
@@ -124,6 +114,7 @@ export default function FencingJourney() {
             </ul>
           </motion.div>
         </div>
+
         {/* Resume embed */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -145,14 +136,23 @@ export default function FencingJourney() {
               Download PDF
             </a>
           </div>
+
           <div className="w-full rounded-2xl overflow-hidden border border-black/10 bg-black/5">
             <iframe
-              src="https://docs.google.com/viewer?url=https://www.shijiafan.com/fencing-resume.pdf&embedded=true"
+              src="/fencing-resume.pdf"
               className="w-full"
               style={{ height: '80vh', minHeight: '600px' }}
               title="Fencing Resume"
             />
+            {/* Fallback message if PDF not yet uploaded */}
+            <noscript>
+              <div className="p-12 text-center text-muted">
+                <p className="mb-4">PDF viewer requires JavaScript.</p>
+                <a href="/fencing-resume.pdf" className="underline">Download the resume directly</a>
+              </div>
+            </noscript>
           </div>
+
           <p className="mt-4 text-sm text-muted text-center">
             If the PDF doesn't load,{' '}
             <a href="/fencing-resume.pdf" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground transition-colors">
@@ -160,7 +160,9 @@ export default function FencingJourney() {
             </a>.
           </p>
         </motion.div>
+
       </main>
+
       {/* Footer */}
       <motion.footer
         initial={{ opacity: 0 }}
