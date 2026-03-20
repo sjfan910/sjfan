@@ -1,19 +1,31 @@
 import { motion } from 'motion/react';
-import { FileText } from 'lucide-react';
+import { FileText, ArrowUpRight } from 'lucide-react';
 
 const publications = [
   {
     title: "Multimodal Sentiment Analysis and Improved Transformer-Based Emotional Music Generation Method for Elderly People in Nursing Homes",
     venue: "MEHSS 2025 International Conferences",
     status: "Published",
-    link: "#"
+    link: "/sentiment_analysis.pdf"
   },
   {
     title: "EDA-Based Cognitive Load Prediction During Music-Modulated Memory Tasks",
     venue: "Cambridge Centre for International Research",
     date: "Oct 2025",
     status: "Published",
-    link: "#"
+    link: "/eda_music.pdf"
+  },
+  {
+    title: "AI & Society: Emotional Neglect in UK Care Homes",
+    venue: "Tonbridge School Social Science Journal",
+    status: "Published",
+    link: "/uk_care_homes.pdf"
+  },
+  {
+    title: "Shannon's Information Theory & Decision Tree — Mathematics Poster",
+    venue: "Tonbridge School",
+    status: "Poster",
+    link: "/info_theory.pdf"
   }
 ];
 
@@ -32,8 +44,11 @@ export default function Publications() {
 
       <div className="flex flex-col gap-8">
         {publications.map((pub, index) => (
-          <motion.div
+          <motion.a
             key={index}
+            href={pub.link}
+            target="_blank"
+            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
@@ -54,12 +69,13 @@ export default function Publications() {
               </div>
             </div>
 
-            <div className="shrink-0 ml-12 md:ml-0">
+            <div className="shrink-0 ml-12 md:ml-0 flex items-center gap-3">
               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-black/5 text-foreground">
                 {pub.status}
               </span>
+              <ArrowUpRight size={18} className="text-muted opacity-0 group-hover:opacity-100 transition-opacity" />
             </div>
-          </motion.div>
+          </motion.a>
         ))}
       </div>
     </section>
