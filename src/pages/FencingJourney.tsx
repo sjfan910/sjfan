@@ -1,12 +1,10 @@
 import { motion } from 'motion/react';
 import { ArrowLeft, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 export default function FencingJourney() {
   return (
     <div className="min-h-screen bg-background text-foreground selection:bg-black selection:text-white">
       <div className="bg-grain"></div>
-
       {/* Minimal top bar */}
       <motion.header
         initial={{ opacity: 0, y: -20 }}
@@ -34,9 +32,7 @@ export default function FencingJourney() {
           </a>
         </div>
       </motion.header>
-
       <main className="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
-
         {/* Hero */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -56,7 +52,6 @@ export default function FencingJourney() {
             11 years on the piste. The last 6, entirely self-coached.
           </p>
         </motion.div>
-
         {/* Story */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
           <motion.div
@@ -88,7 +83,6 @@ export default function FencingJourney() {
               refereeing earnings to the team equipment fund.
             </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -130,7 +124,6 @@ export default function FencingJourney() {
             </ul>
           </motion.div>
         </div>
-
         {/* Resume embed */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -152,23 +145,14 @@ export default function FencingJourney() {
               Download PDF
             </a>
           </div>
-
           <div className="w-full rounded-2xl overflow-hidden border border-black/10 bg-black/5">
             <iframe
-              src="/fencing-resume.pdf"
+              src="https://docs.google.com/viewer?url=https://www.shijiafan.com/fencing-resume.pdf&embedded=true"
               className="w-full"
               style={{ height: '80vh', minHeight: '600px' }}
               title="Fencing Resume"
             />
-            {/* Fallback message if PDF not yet uploaded */}
-            <noscript>
-              <div className="p-12 text-center text-muted">
-                <p className="mb-4">PDF viewer requires JavaScript.</p>
-                <a href="/fencing-resume.pdf" className="underline">Download the resume directly</a>
-              </div>
-            </noscript>
           </div>
-
           <p className="mt-4 text-sm text-muted text-center">
             If the PDF doesn't load,{' '}
             <a href="/fencing-resume.pdf" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground transition-colors">
@@ -176,9 +160,7 @@ export default function FencingJourney() {
             </a>.
           </p>
         </motion.div>
-
       </main>
-
       {/* Footer */}
       <motion.footer
         initial={{ opacity: 0 }}
