@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Download } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -49,6 +50,12 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
+            <Link
+              to="/fencing"
+              className="text-sm font-medium text-muted hover:text-foreground transition-colors"
+            >
+              Fencing
+            </Link>
           </div>
           <a
             href="/resume.pdf"
@@ -90,6 +97,13 @@ export default function Navbar() {
                   {link.name}
                 </a>
               ))}
+              <Link
+                to="/fencing"
+                onClick={() => setIsOpen(false)}
+                className="text-lg font-medium text-foreground"
+              >
+                Fencing
+              </Link>
               <a
                 href="/resume.pdf"
                 target="_blank"

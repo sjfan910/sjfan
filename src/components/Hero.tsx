@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
-import { ArrowDown } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   const name = "Shijia Fan";
@@ -54,11 +55,25 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-          className="text-xl md:text-3xl text-muted font-light max-w-2xl leading-relaxed"
+          className="text-xl md:text-3xl text-muted font-light max-w-2xl leading-relaxed mb-10"
         >
           AI researcher. Fencer. Builder. <br />
           <span className="text-foreground font-medium">Building technology that cares.</span>
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
+        >
+          <Link
+            to="/fencing"
+            className="inline-flex items-center gap-2 text-sm font-medium border border-black/20 text-foreground px-5 py-2.5 rounded-full hover:bg-foreground hover:text-background transition-colors"
+          >
+            My Fencing Journey
+            <ArrowUpRight size={15} />
+          </Link>
+        </motion.div>
       </div>
 
       <motion.div
