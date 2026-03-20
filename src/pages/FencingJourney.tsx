@@ -46,14 +46,14 @@ export default function FencingJourney() {
         >
           <div className="flex items-center gap-3 mb-6">
             <span className="h-px w-8 bg-muted block"></span>
-            <span className="text-sm font-medium text-muted uppercase tracking-widest">Since 2013</span>
+            <span className="text-sm font-medium text-muted uppercase tracking-widest">Since 2016</span>
           </div>
           <h1 className="text-6xl md:text-8xl font-display font-semibold tracking-tighter leading-[0.9] mb-8">
             My Fencing<br />
             <span className="text-muted">Journey.</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted font-light leading-relaxed">
-            11 years on the piste. The last 6, entirely self-coached.
+            The highlight of 11 years.
           </p>
         </motion.div>
 
@@ -65,7 +65,7 @@ export default function FencingJourney() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6"
           >
-            <h2 className="text-sm font-medium text-muted uppercase tracking-widest">The Story</h2>
+            <h2 className="text-sm font-medium text-muted uppercase tracking-widest">My Story</h2>
             <p className="text-lg font-light text-foreground/80 leading-relaxed">
               I started fencing at age 8 in Beijing, training under Olympic champion Zhong Man. The rigorous, technical, uncompromising foundation shaped how I approach everything: sport, research, and passion.
             </p>
@@ -103,7 +103,7 @@ export default function FencingJourney() {
             <ul className="space-y-4">
               {[
                 { stat: "#11", label: "UK Junior Men's Sabre ranking" },
-                { stat: "2nd", label: "Nationally as a team — first time in a decade" },
+                { stat: "2nd", label: "British Schools teams competition" },
                 { stat: "11 yrs", label: "Total competitive fencing" },
                 { stat: "6 yrs", label: "Self-coached, no formal coaching" },
                 { stat: "30→50", label: "Club members grown as Head Captain" },
@@ -171,7 +171,7 @@ export default function FencingJourney() {
         transition={{ duration: 0.6, delay: 0.8 }}
         className="border-t border-black/5 px-6 md:px-12 py-8 max-w-7xl mx-auto flex items-center justify-between"
       >
-        <span className="text-sm text-muted font-light">© 2024 Shijia Fan</span>
+        <span className="text-sm text-muted font-light">© {new Date().getFullYear()} Shijia Fan</span>
         <Link to="/" className="text-sm font-medium text-muted hover:text-foreground transition-colors">
           ← Back to Portfolio
         </Link>
