@@ -58,7 +58,7 @@ export default function Navbar() {
             </Link>
           </div>
           <a
-            href="/resume.pdf"
+            href="/personal_resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 text-sm font-medium bg-foreground text-background px-4 py-2 rounded-full hover:bg-foreground/90 transition-colors"
@@ -105,7 +105,7 @@ export default function Navbar() {
                 Fencing
               </Link>
               <a
-                href="/resume.pdf"
+                href="/personal_resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 text-sm font-medium bg-foreground text-background px-4 py-3 rounded-full mt-2"
